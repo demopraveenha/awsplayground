@@ -1,5 +1,5 @@
 #!/bin/bash
-#Author CCoE
+#Author Praveen HA
   InstanceID=$( aws ec2 run-instances --image-id ami-03d89680c2d313791 --count 1 --instance-type t2.micro --key-name test-centos --security-group-ids sg-e76ff499 --subnet-id subnet-01c47b5a --region $REGION --output text | grep INSTANCES | cut -f 8)
         echo "Starting  Instance $InstanceID....."
         echo "Waiting for Instance $InstanceID  to get ready "
